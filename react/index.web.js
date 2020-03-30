@@ -12,6 +12,13 @@ import { Platform } from './features/base/react';
 const logger = getLogger('index.web');
 const OS = Platform.OS;
 
+// Add monetization meta tag
+const meta = document.createElement('meta');
+
+meta.name = 'monetization';
+meta.content = '';
+document.getElementsByTagName('head')[0].appendChild(meta);
+
 /**
  * Renders the app when the DOM tree has been loaded.
  */
